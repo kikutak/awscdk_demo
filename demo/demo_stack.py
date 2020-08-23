@@ -17,7 +17,7 @@ class DemoStack(core.Stack):
                         ignore_public_acls = True,
                         restrict_public_buckets = True
                     ),
-                    bucket_name = "cdkdemobucket",
+                    bucket_name = "cdkdemobucket"
                     )
 
         # upload local file to s3 bucket
