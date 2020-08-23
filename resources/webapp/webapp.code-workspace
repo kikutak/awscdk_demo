@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"PATH": "${env:PATH};${workspaceRoot}\\.appenv\\Scripts",
+			"PYTHONPATH": "${env:PYTHONPATH};${workspaceRoot}\\lib"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\resources"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"PATH": "${workspaceRoot}\\.env\\Scripts;${env:PATH}"
+		},
+	}
+}

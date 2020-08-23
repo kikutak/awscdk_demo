@@ -1,0 +1,6 @@
+artifact
+package-lock.json
+__pycache__
+.pytest_cache
+.appenv
+*.egg-info
