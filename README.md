@@ -1,4 +1,6 @@
 # Welcome to CDK demo
+
+Install packages for lambda code.
 ```
 $ cd resources/webapp
 $ python -m venv .appenv
