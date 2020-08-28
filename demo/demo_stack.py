@@ -20,6 +20,7 @@ class DemoStack(core.Stack):
                     sources = [s3deploy.Source.asset('resources/s3')],
                     destination_bucket = bucket)
 
+        # create lambda function
         handler = lambda_.Function(self, "toppage",
                     runtime=lambda_.Runtime.PYTHON_3_7,
                     code=lambda_.Code.asset("resources/webapp/artifact"),
@@ -34,11 +35,8 @@ class DemoStack(core.Stack):
         api = apigateway.RestApi(self, "demo page",
                     rest_api_name="demo page"
                     )
-#        api.root.add_resource("{id}")
         get_top_page = apigateway.LambdaIntegration(handler,
                     request_templates={"application/json": '{ "statusCode": "200" }'}
                     )
 
         api.root.add_method("GET", get_top_page)
-#        api.root.add_method("POST", get_top_page)
-#        api.root.add_method("DELETE", get_top_page)
