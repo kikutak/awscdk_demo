@@ -1,32 +1,27 @@
 
 <head>
     <title>AWS CDK Demo</title>
+    <style>
+        th{
+            width:auto
+        }
+    </style>
+    <meta charset="UTF-8">
 </head>
 <header>
     <h1>AWS CDK Demo</h1>
 </header>
 <body>
-    <form action="./index.html" method="POST">
-        <input type="text" title="name">
-        <input type="hidden" name="action" value="Create">
-        <button title="Create">Create</button>
-    </form>
+    <h3>cdkdemobucketの中身</h3>
     <table border="1">
         <tr>
-            <th bgcolor="#e0e0e0">username</th>
+            <th bgcolor="#e0e0e0">Contents</th>
             <th bgcolor="#e0e0e0">URL</th>
-            <th bgcolor="#e0e0e0">Action</th>
         </tr>
-        {% for key, value in data.items() %}
+        {% for key, value in bucketdata.items() %}
         <tr>
-            <form action="./index.html" method="POST">
-                <th>{{ key }}</th>
-                <th>{{ value }}</th>
-                <input type="hidden" name="user" value="{{ key }}">
-                <input type="hidden" name="url" value="{{ value }}">
-                <input type="hidden" name="action" value="Destroy">
-                <th><button title="Destroy">Destroy</button></th>
-            </form>
+            <th align="left">{{ key }}</th>
+            <th><a align="left" href="{{ value }}">{{ value }}</a></th>
         </tr>
         {% endfor %}
     </table>

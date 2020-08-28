@@ -11,12 +11,7 @@ class DemoStack(core.Stack):
 
         # create s3 bucket
         bucket = s3.Bucket(self, "cdkdemobucket",
-                    block_public_access = s3.BlockPublicAccess(
-                        block_public_acls = True,
-                        block_public_policy = True,
-                        ignore_public_acls = True,
-                        restrict_public_buckets = True
-                    ),
+                    public_read_access = True,
                     bucket_name = "cdkdemobucket"
                     )
 
